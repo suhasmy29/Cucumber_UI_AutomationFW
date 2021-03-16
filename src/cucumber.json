@@ -1,0 +1,170 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Login validation",
+        "description": "",
+        "id": "swaglabs-website;login-validation",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 18282486000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on Swaglabs website loginpage",
+            "match": {
+              "location": "loginToSwagLabs.user_is_on_swaglabs_website_loginpage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2888023700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters username \u003d \"standard_user\" and Password \u003d \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 24
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 55
+                }
+              ],
+              "location": "loginToSwagLabs.user_enters_username_something_and_password_something(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2364830800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page is displayed",
+            "match": {
+              "location": "loginToSwagLabs.home_page_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Swaglabs website",
+    "description": "",
+    "id": "swaglabs-website",
+    "keyword": "Feature",
+    "uri": "Login.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Logout validation",
+        "description": "",
+        "id": "swaglabs-website-logout;logout-validation",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9354372900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on Swaglabs website loginpage",
+            "match": {
+              "location": "loginToSwagLabs.user_is_on_swaglabs_website_loginpage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 738292000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters username \u003d \"problem_user\" and Password \u003d \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "problem_user",
+                  "offset": 24
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 54
+                }
+              ],
+              "location": "loginToSwagLabs.user_enters_username_something_and_password_something(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 166018800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click on Menu",
+            "match": {
+              "location": "loginToSwagLabs.click_on_Menu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 248386900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on logout",
+            "match": {
+              "location": "loginToSwagLabs.click_on_logout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1573595900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "again login Page is displayed",
+            "match": {
+              "location": "loginToSwagLabs.again_login_page_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Swaglabs website logout",
+    "description": "",
+    "id": "swaglabs-website-logout",
+    "keyword": "Feature",
+    "uri": "Logout.feature"
+  }
+]
