@@ -18,6 +18,10 @@ public class homePage extends baseTestclass{
 	@FindBy(id="logout_sidebar_link")
 	private WebElement logOut;
 	
+	@FindBy(xpath="//*[@id=\"page_wrapper\"]/footer/div")
+	private WebElement footer_licenseText;
+	
+	
 	public String getTitle()
 	{
 		return (Product.getText());
@@ -31,6 +35,11 @@ public class homePage extends baseTestclass{
 	public void clickLogout()
 	{
 		logOut.click();
+	}
+	
+	public String getFooterText()
+	{
+		return footer_licenseText.getText();
 	}
 	
 	public homePage(WebDriver driver)

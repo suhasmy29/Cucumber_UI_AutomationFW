@@ -66,4 +66,17 @@ public class loginToSwagLabs extends baseTestclass {
 			Assert.assertEquals("Success", "https://www.saucedemo.com/", driver.getCurrentUrl()); 
 			driver.quit();
 	    }
+		
+		
+		@Then("^footer text = \"([^\"]*)\" is displayed in the home Page$")
+	    public void footer_text_something_is_displayed_in_the_home_page(String strArg1) throws Throwable {
+			Assert.assertEquals("Success", strArg1, hp.getFooterText());
+			driver.quit();
+	    }
+		
+		 /*Then("Then footer text is displayed in the home Page", () -> {
+	         System.out.println("Inside Given");
+	    });*/
+		
+		
 }
