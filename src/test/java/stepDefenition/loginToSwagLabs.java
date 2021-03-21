@@ -1,4 +1,5 @@
 package stepDefenition;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -8,6 +9,7 @@ import generic.baseTestclass;
 import PageObjects.LoginPage;
 import PageObjects.homePage;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
@@ -71,6 +73,25 @@ public class loginToSwagLabs extends baseTestclass {
 		@Then("^footer text = \"([^\"]*)\" is displayed in the home Page$")
 	    public void footer_text_something_is_displayed_in_the_home_page(String strArg1) throws Throwable {
 			Assert.assertEquals("Success", strArg1, hp.getFooterText());
+			driver.quit();
+	    }
+		
+		@When("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
+		public void user_enters_something_and_something(String username, String password) throws Throwable {
+		      lp.setUsername(username);
+		      lp.setPassword(password);
+		      lp.click_Login();
+		    }
+		
+		@Then("^following error message is displayed$")
+	    public void following_error_message_is_displayed(DataTable table) throws Throwable {
+	       List<List<String>> obj = table.raw();
+	       String err_Msg1 = obj.get(0).get(0).toString();
+	       bt.timeOut(driver);
+	       String err_Msg = lp.getErrormessage();
+	       System.out.println(err_Msg1);
+	       System.out.println(err_Msg);
+	       Assert.assertEquals("Success", err_Msg, err_Msg1);
 			driver.quit();
 	    }
 		

@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 glue="stepDefenition",
 plugin= {"pretty","html:src/cucumber","json:src/cucumber.json","junit:target/cukes.xml"},
 monochrome=true,
-tags ="@Smoke")
+tags ="@Smoke1")
 public class testRunner{
 
 

@@ -6,222 +6,138 @@ formatter.feature({
   "id": "swaglabs-website",
   "keyword": "Feature"
 });
-formatter.scenario({
-  "line": 4,
-  "name": "Login validation",
+formatter.scenarioOutline({
+  "line": 28,
+  "name": "Login validation - Invalid Credentials",
   "description": "",
-  "id": "swaglabs-website;login-validation",
-  "type": "scenario",
-  "keyword": "Scenario",
+  "id": "swaglabs-website;login-validation---invalid-credentials",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 3,
-      "name": "@Smoke"
+      "line": 27,
+      "name": "@Smoke1"
     }
   ]
 });
 formatter.step({
-  "line": 5,
+  "line": 29,
   "name": "User is on Swaglabs website loginpage",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
-  "name": "user enters username \u003d \"standard_user\" and Password \u003d \"secret_sauce\"",
+  "line": 30,
+  "name": "user enters \"\u003cUsername\u003e\" and \"\u003cPassword\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 7,
-  "name": "Home Page is displayed",
+  "line": 31,
+  "name": "following error message is displayed",
+  "rows": [
+    {
+      "cells": [
+        "Epic sadface: Username and password do not match any user in this service"
+      ],
+      "line": 32
+    }
+  ],
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 34,
+  "name": "",
+  "description": "",
+  "id": "swaglabs-website;login-validation---invalid-credentials;",
+  "rows": [
+    {
+      "cells": [
+        "Username",
+        "Password"
+      ],
+      "line": 35,
+      "id": "swaglabs-website;login-validation---invalid-credentials;;1"
+    },
+    {
+      "cells": [
+        "abc",
+        "secret_sauce"
+      ],
+      "line": 36,
+      "id": "swaglabs-website;login-validation---invalid-credentials;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.scenario({
+  "line": 36,
+  "name": "Login validation - Invalid Credentials",
+  "description": "",
+  "id": "swaglabs-website;login-validation---invalid-credentials;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 27,
+      "name": "@Smoke1"
+    }
+  ]
+});
+formatter.step({
+  "line": 29,
+  "name": "User is on Swaglabs website loginpage",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 30,
+  "name": "user enters \"abc\" and \"secret_sauce\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 31,
+  "name": "following error message is displayed",
+  "rows": [
+    {
+      "cells": [
+        "Epic sadface: Username and password do not match any user in this service"
+      ],
+      "line": 32
+    }
+  ],
   "keyword": "Then "
 });
 formatter.match({
   "location": "loginToSwagLabs.user_is_on_swaglabs_website_loginpage()"
 });
 formatter.result({
-  "duration": 12224324600,
+  "duration": 55839123700,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "standard_user",
-      "offset": 24
+      "val": "abc",
+      "offset": 13
     },
     {
       "val": "secret_sauce",
-      "offset": 55
+      "offset": 23
     }
   ],
-  "location": "loginToSwagLabs.user_enters_username_something_and_password_something(String,String)"
+  "location": "loginToSwagLabs.user_enters_something_and_something(String,String)"
 });
 formatter.result({
-  "duration": 843902100,
+  "duration": 3888806300,
   "status": "passed"
 });
 formatter.match({
-  "location": "loginToSwagLabs.home_page_is_displayed()"
+  "location": "loginToSwagLabs.following_error_message_is_displayed(DataTable)"
 });
 formatter.result({
-  "duration": 1232811100,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 10,
-  "name": "Footer text validation",
-  "description": "",
-  "id": "swaglabs-website;footer-text-validation",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 9,
-      "name": "@Smoke"
-    }
-  ]
-});
-formatter.step({
-  "line": 11,
-  "name": "User is on Swaglabs website loginpage",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 12,
-  "name": "user enters username \u003d \"standard_user\" and Password \u003d \"secret_sauce\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 13,
-  "name": "footer text \u003d \"© 2021 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy\" is displayed in the home Page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "loginToSwagLabs.user_is_on_swaglabs_website_loginpage()"
-});
-formatter.result({
-  "duration": 6448344700,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "standard_user",
-      "offset": 24
-    },
-    {
-      "val": "secret_sauce",
-      "offset": 55
-    }
-  ],
-  "location": "loginToSwagLabs.user_enters_username_something_and_password_something(String,String)"
-});
-formatter.result({
-  "duration": 748301000,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "© 2021 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy",
-      "offset": 15
-    }
-  ],
-  "location": "loginToSwagLabs.footer_text_something_is_displayed_in_the_home_page(String)"
-});
-formatter.result({
-  "duration": 1074871500,
-  "status": "passed"
-});
-formatter.uri("Logout.feature");
-formatter.feature({
-  "line": 1,
-  "name": "Swaglabs website logout",
-  "description": "",
-  "id": "swaglabs-website-logout",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 4,
-  "name": "Logout validation",
-  "description": "",
-  "id": "swaglabs-website-logout;logout-validation",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 3,
-      "name": "@Smoke"
-    }
-  ]
-});
-formatter.step({
-  "line": 5,
-  "name": "User is on Swaglabs website loginpage",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "user enters username \u003d \"problem_user\" and Password \u003d \"secret_sauce\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "click on Menu",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "click on logout",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 9,
-  "name": "again login Page is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "loginToSwagLabs.user_is_on_swaglabs_website_loginpage()"
-});
-formatter.result({
-  "duration": 6046663800,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "problem_user",
-      "offset": 24
-    },
-    {
-      "val": "secret_sauce",
-      "offset": 54
-    }
-  ],
-  "location": "loginToSwagLabs.user_enters_username_something_and_password_something(String,String)"
-});
-formatter.result({
-  "duration": 798374600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "loginToSwagLabs.click_on_Menu()"
-});
-formatter.result({
-  "duration": 216696800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "loginToSwagLabs.click_on_logout()"
-});
-formatter.result({
-  "duration": 191425300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "loginToSwagLabs.again_login_page_is_displayed()"
-});
-formatter.result({
-  "duration": 969942900,
+  "duration": 25737711500,
   "status": "passed"
 });
 });
